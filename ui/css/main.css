@@ -1,0 +1,26 @@
+body {
+    background: #fff;
+}
+
+.collection-item {
+    line-height: 25px;
+    line-height: 2.5rem !important;
+}
+
+.secondary-content {
+    margin-top: 7px !important;
+}
+
+.modal_key {
+    font-size: 12px;
+}
+
+.modal_value {
+    font-size: 15px;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.chips .input {
+    width: 100% !important;
+}

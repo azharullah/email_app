@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Mailbox</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
+
+</head>
+
+<body class="container">
+    <nav>
+        <div class="nav-wrapper">
+            <a id="name" href="#" class="brand-logo right">name</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#">Email Application</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+            <li id="inbox_tab" class="tab"><a class="active" href="#inbox">Inbox</a></li>
+            <li id="sent_tab" class="tab"><a href="#sent">Sent</a></li>
+            <li id="drafts_tab" class="tab"><a href="#drafts">Drafts</a></li>
+            <li id="trash_tab" class="tab"><a href="#trash">Trash</a></li>
+        </ul>
+        <div id="inbox" class="col s12">
+            <div id="inbox_view">
+                <ul id="inbox_list" class="collection"></ul>
+            </div>
+        </div>
+        <div id="sent" class="col s12">
+            <div id="sent_view">
+                <ul id="sent_list" class="collection"></ul>
+            </div>
+        </div>
+        <div id="drafts" class="col s12">
+            <div id="drafts_view">
+                <ul id="drafts_list" class="collection"></ul>
+            </div>
+        </div>
+        <div id="trash" class="col s12">
+            <div id="trash_view">
+                <ul id="trash_list" class="collection"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="view_modal" class="modal view_modal">
+        <div class="modal-content">
+            <p><span class="modal_key">From:</span> <span id="modal_from" class="modal_value"></span></p>
+            <p><span class="modal_key">To:</span> <span id="modal_to" class="modal_value"></span></p>
+            <p><span class="modal_key">Date:</span> <span id="modal_date" class="modal_value"></span></p>
+            <p><span class="modal_key">Subject:</span> <span id="modal_subject" class="modal_value"></span></p>
+            <p><span id="modal_body" class="modal_value"></span></p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="compose_modal" class="modal compose_modal">
+        <div class="modal-content">
+            <form class="col s12" id="compose_form">
+                <h6>Compose a mail</h6> <br>
+                <div id="compose_receiver_emails1" class="col s12">
+                    <div id="compose_receiver_emails" class="chips chips-autocomplete chips-placeholder"></div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="compose_subject" type="text">
+                        <label for="compose_subject">Subject</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="compose_body" class="materialize-textarea"></textarea>
+                        <label for="compose_body">Body</label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <button id='compose_submit' class='col s3 offset-s9 btn btn-large waves-effect red'>Send</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="compose_button" class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="js/mail_view.js"></script>
+
+</body>
+
+</html>
